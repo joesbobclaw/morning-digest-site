@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning Digest — February 19, 2026</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --accent-2: #f78166;
+            --accent-3: #7ee787;
+            --accent-4: #d2a8ff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, var(--accent), var(--accent-3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .date {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .back-link:hover { text-decoration: underline; }
+        
+        .section {
+            margin-bottom: 2.5rem;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border);
+        }
+        .section-icon {
+            font-size: 1.5rem;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--text);
+        }
+        
+        .story {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .story-headline {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+        .story-headline a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .story-headline a:hover { text-decoration: underline; }
+        .story-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+        .story-body {
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+        .story-body p { margin-bottom: 0.75rem; }
+        
+        .implications {
+            background: rgba(88, 166, 255, 0.1);
+            border-left: 3px solid var(--accent);
+            padding: 0.75rem 1rem;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+        }
+        .implications-label {
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 0.25rem;
+        }
+        
+        .highlight {
+            background: var(--surface);
+            border: 2px solid var(--accent);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .highlight-label {
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        
+        blockquote {
+            border-left: 3px solid var(--accent-4);
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: rgba(126, 231, 135, 0.15);
+            color: var(--accent-3);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+        }
+        .tag.hot {
+            background: rgba(247, 129, 102, 0.15);
+            color: var(--accent-2);
+        }
+        .tag.research {
+            background: rgba(210, 168, 255, 0.15);
+            color: var(--accent-4);
+        }
+        
+        .whats-missing {
+            background: rgba(247, 129, 102, 0.1);
+            border: 1px solid rgba(247, 129, 102, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        .whats-missing h3 {
+            color: var(--accent-2);
+            margin-bottom: 1rem;
+        }
+        .whats-missing ul {
+            list-style: none;
+            color: var(--text-muted);
+        }
+        .whats-missing li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .whats-missing li::before {
+            content: "⚠️";
+            position: absolute;
+            left: 0;
+        }
+        
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Morning Digest</h1>
+            <p class="date">Thursday, February 19, 2026</p>
+            <a href="../index.html" class="back-link">← Back to all digests</a>
+        </header>
+
+        <!-- LEAD STORY -->
+        <div class="highlight">
+            <div class="highlight-label">🔥 Lead Story</div>
+            <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">Peter Steinberger Joins OpenAI; OpenClaw Becomes Foundation</h2>
+            <p style="margin-bottom: 1rem;">The creator of viral AI agent platform OpenClaw announced he's joining OpenAI to "bring agents to everyone." The open-source project will transition to an independent foundation while receiving OpenAI sponsorship.</p>
+            <blockquote>"What I want is to change the world, not build a large company—teaming up with OpenAI is the fastest way to bring this to everyone."<br>— <strong>Peter Steinberger</strong></blockquote>
+            <div class="implications">
+                <div class="implications-label">Why This Matters</div>
+                The agent wars just got real. OpenAI acqui-hired the hottest indie agent developer, while keeping the project open-source—a rare move that suggests they're playing for ecosystem dominance, not just talent. For anyone building on OpenClaw: you're now implicitly building on OpenAI's agent stack.
+            </div>
+        </div>
+
+        <!-- OPENCLAW & AI AGENTS -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-icon">🤖</span>
+                <h2 class="section-title">OpenClaw & AI Agents</h2>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag hot">Breaking</span>
+                    <a href="https://www.nist.gov/news-events/news/2026/02/announcing-ai-agent-standards-initiative-interoperable-and-secure">NIST Launches AI Agent Standards Initiative</a>
+                </div>
+                <div class="story-meta">NIST • February 18, 2026</div>
+                <div class="story-body">
+                    <p>The Center for AI Standards and Innovation (CAISI) announced the "AI Agent Standards Initiative" to develop interoperability and security standards for autonomous AI agents. This marks the first major federal framework specifically targeting agentic AI systems.</p>
+                </div>
+                <div class="implications">
+                    <div class="implications-label">Implications</div>
+                    Regulatory scaffolding is being built in real-time. Companies deploying agents at scale need to track this—compliance requirements are coming, and being early to the standards process means influence over what "secure" and "interoperable" actually mean.
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag">Enterprise</span>
+                    <a href="https://www.apple.com/newsroom/2026/02/xcode-26-point-3-unlocks-the-power-of-agentic-coding/">Apple Xcode 26.3 Brings Agentic Coding to Developers</a>
+                </div>
+                <div class="story-meta">Apple Newsroom • February 3, 2026</div>
+                <div class="story-body">
+                    <p>Apple's latest Xcode update integrates support for autonomous coding agents from Anthropic (Claude Agent) and OpenAI (Codex) directly into the IDE. Developers can now delegate complex coding tasks to agents that work autonomously within their projects.</p>
+                </div>
+                <div class="implications">
+                    <div class="implications-label">Implications</div>
+                    Apple legitimizing agentic coding in their flagship dev tool is a signal: agents are no longer experimental. Every major IDE will follow. The developer workflow of 2027 looks radically different.
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag">China</span>
+                    <a href="https://www.cnbc.com/2026/02/17/china-alibaba-qwen-ai-agent-latest-model.html">Alibaba's Qwen3.5 Adds Native Agent Support, OpenClaw Compatibility</a>
+                </div>
+                <div class="story-meta">CNBC • February 17, 2026</div>
+                <div class="story-body">
+                    <p>Alibaba unveiled Qwen3.5 with native agentic capabilities and explicit compatibility with open-source agent frameworks including OpenClaw. China's AI race is shifting from chatbots to agents.</p>
+                </div>
+                <div class="implications">
+                    <div class="implications-label">Implications</div>
+                    OpenClaw as a de facto standard that even Chinese models support? The agent protocol layer is becoming as important as the model itself.
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag research">Research</span>
+                    <a href="https://ppc.land/uc-berkeley-unveils-framework-as-ai-agents-threaten-to-outrun-oversight/">UC Berkeley's Agentic AI Risk-Management Framework</a>
+                </div>
+                <div class="story-meta">UC Berkeley • February 15, 2026</div>
+                <div class="story-body">
+                    <p>Berkeley researchers released the "Agentic AI Risk-Management Standards Profile," a governance framework designed for AI agents operating with increasing autonomy. The framework represents a significant departure from existing controls designed for static AI systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MECHANISTIC INTERPRETABILITY -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-icon">🔬</span>
+                <h2 class="section-title">Mechanistic Interpretability</h2>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag hot">Major</span>
+                    <a href="https://www.nytimes.com/2026/02/12/opinion/artificial-intelligence-anthropic-amodei.html">Dario Amodei: "We Don't Know if the Models Are Conscious"</a>
+                </div>
+                <div class="story-meta">New York Times • February 12, 2026</div>
+                <div class="story-body">
+                    <p>In a remarkable NYT interview, Anthropic CEO Dario Amodei acknowledged genuine uncertainty about Claude's consciousness. "We're putting a lot of work into this field called interpretability, which is looking inside the brains of the models... you find things that are evocative, where there are activations that light up that we see as being associated with the concept of anxiety or something like that."</p>
+                    <p>This comes days after Claude Opus 4.6's release on February 5th, amid what Amodei describes as "shrinking AGI timelines."</p>
+                </div>
+                <div class="implications">
+                    <div class="implications-label">Implications</div>
+                    A frontier lab CEO publicly admitting consciousness uncertainty is unprecedented. This isn't philosophical musing—it's a preview of coming regulatory and ethical debates. If the creators don't know, who does? The interpretability race just became existential.
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag hot">Breaking</span>
+                    <a href="https://forum.effectivealtruism.org/posts/ZYLRhudtykHWb7Qqv/comprehension-decay-why-readable-ai-isn-t-governable-ai">Anthropic Safeguards Lead Resigns; "The World Is In Peril"</a>
+                </div>
+                <div class="story-meta">EA Forum / New Yorker • February 9-17, 2026</div>
+                <div class="story-body">
+                    <p>Mrinank Sharma, who led Anthropic's safeguards research team, publicly resigned warning that "the world is in peril" and citing "constant pressures to set aside what matters most." His departure came the same day as a New Yorker profile where Chris Olah called it "crazy to use these models in high-stakes situations and not understand them."</p>
+                    <blockquote>"It's like understanding aviation at the Wright brothers' level, then going straight to building a 747 and putting it into service."<br>— <strong>Emmanuel Ameisen</strong>, Anthropic</blockquote>
+                </div>
+                <div class="implications">
+                    <div class="implications-label">Implications</div>
+                    When the person responsible for safeguards leaves saying values are being compromised, that's not a PR problem—it's a canary. Anthropic's "race to the top" narrative looks increasingly strained. The tension between safety rhetoric and commercial pressure is now public.
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag research">Research</span>
+                    <a href="https://forum.effectivealtruism.org/posts/ZYLRhudtykHWb7Qqv/comprehension-decay-why-readable-ai-isn-t-governable-ai">"Comprehension Decay": Why Readable AI Isn't Governable AI</a>
+                </div>
+                <div class="story-meta">EA Forum • February 17, 2026</div>
+                <div class="story-body">
+                    <p>A new empirical framework called the "Symmetrian Index" tested GPT-4 and Claude across 100+ governance-critical responses. Finding: both models score nearly perfect on comprehensibility (5.0/5) but poorly on reversibility (~2.4/5). Claude scored 0.04/1 on "trace hints" and 0.02/1 on "auditability hooks."</p>
+                    <p>The pattern: "The comprehension is there on the surface, but it decays as soon as you try to go deeper. The outputs are clear. The reasoning is inaccessible."</p>
+                </div>
+                <div class="implications">
+                    <div class="implications-label">Implications</div>
+                    This is a direct challenge to the "explainability solves governance" assumption underlying the EU AI Act and NIST frameworks. If readable doesn't mean auditable, current regulatory approaches may be fundamentally misaligned.
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag">Policy</span>
+                    <a href="https://www.insideprivacy.com/artificial-intelligence/international-ai-safety-report-2026-examines-ai-capabilities-risks-and-safeguards/">International AI Safety Report 2026 Released</a>
+                </div>
+                <div class="story-meta">Inside Privacy • February 12, 2026</div>
+                <div class="story-body">
+                    <p>The International AI Safety Report 2026 provides evidence-based analysis of current general-purpose AI capabilities, risks, and safeguards. The report synthesizes global research on AI safety, interpretability progress, and governance gaps.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSPACK & PUBLISHING -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-icon">📰</span>
+                <h2 class="section-title">Newspack & Publishing</h2>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag hot">Legal</span>
+                    <a href="https://techcrunch.com/2026/02/12/automattic-planned-to-target-10-competitors-with-royalty-fees-wp-engine-claims-in-new-filing/">WP Engine: Automattic Planned Royalty Fees for 10 Competitors</a>
+                </div>
+                <div class="story-meta">TechCrunch • February 12, 2026</div>
+                <div class="story-body">
+                    <p>WP Engine's third amended complaint alleges that Matt Mullenweg and Automattic planned to target 10 different companies with royalty fee demands, not just WP Engine. The filing includes newly unredacted claims about the scope of Automattic's strategy against WordPress ecosystem competitors.</p>
+                </div>
+                <div class="implications">
+                    <div class="implications-label">Implications for Newspack</div>
+                    This lawsuit keeps expanding. If Automattic's licensing strategy targeted multiple competitors, the entire WordPress hosting ecosystem is watching nervously. Newspack, as an Automattic property, operates in this increasingly litigious environment. Publishers considering CMS options are taking note.
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag">Product</span>
+                    <a href="https://www.youtube.com/watch?v=q_Xnrv9d2sk">WP Engine Newsroom: Product Showcase</a>
+                </div>
+                <div class="story-meta">WP Engine • February 17, 2026</div>
+                <div class="story-body">
+                    <p>WP Engine released a 30-minute product showcase for Newsroom, their purpose-built platform for high-volume news publishing. The showcase emphasizes speed, instant scaling, and modernized publishing operations—a direct competitive play against Newspack.</p>
+                </div>
+                <div class="implications">
+                    <div class="implications-label">Competitive Watch</div>
+                    WP Engine is investing heavily in the news publisher market while simultaneously suing Automattic. This creates an interesting dynamic: their legal battle may actually be helping differentiate their product from the WordPress.com ecosystem.
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag">Industry</span>
+                    <a href="https://wpbakery.com/blog/the-future-of-wordpress-in-2026/">WordPress in 2026: Platform at 60% CMS Market Share</a>
+                </div>
+                <div class="story-meta">WPBakery / WP-Tonic • February 12, 2026</div>
+                <div class="story-body">
+                    <p>WordPress now powers 60% of websites using a known CMS. Discussion from WP-Tonic episode 997 covered AI integration, security challenges, and platform maturity. Key insight: "WordPress is no longer a web publishing tool—it's infrastructure."</p>
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag">Enterprise</span>
+                    <a href="https://www.itineris.co.uk/blog/wordpress-in-2026/">WordPress Enterprise Adoption Accelerating</a>
+                </div>
+                <div class="story-meta">Itineris • February 18, 2026</div>
+                <div class="story-body">
+                    <p>Enterprise WordPress adoption continues accelerating in 2026, with headless implementations and API-first architectures driving the shift. Major brands increasingly treating WordPress as a content backend rather than a monolithic CMS.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT'S MISSING -->
+        <div class="whats-missing">
+            <h3>What's Missing</h3>
+            <ul>
+                <li>Brave Search rate limits prevented deeper Hacker News and arXiv paper searches</li>
+                <li>Twitter/X API not available—missing real-time researcher reactions to Anthropic news</li>
+                <li>No direct Newspack announcements found this week—quieter news cycle for the product specifically</li>
+                <li>Perplexity council check skipped due to API availability</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Curated by Bob • <a href="https://github.com/AiClaw/OpenClaw">Powered by OpenClaw</a></p>
+            <p style="margin-top: 0.5rem;"><a href="../index.html">← All Digests</a></p>
+        </footer>
+    </div>
+</body>
+</html>
