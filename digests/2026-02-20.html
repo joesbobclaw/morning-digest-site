@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning Digest — February 20, 2026</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --accent-2: #f78166;
+            --accent-3: #7ee787;
+            --accent-4: #d2a8ff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, var(--accent), var(--accent-3));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .date {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .back-link:hover { text-decoration: underline; }
+        
+        .section {
+            margin-bottom: 2.5rem;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border);
+        }
+        .section-icon {
+            font-size: 1.5rem;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--text);
+        }
+        
+        .story {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .story-headline {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+        .story-headline a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .story-headline a:hover { text-decoration: underline; }
+        .story-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+        .story-body {
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+        .story-body p { margin-bottom: 0.75rem; }
+        
+        .implications {
+            background: rgba(88, 166, 255, 0.1);
+            border-left: 3px solid var(--accent);
+            padding: 0.75rem 1rem;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+        }
+        .implications-label {
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 0.25rem;
+        }
+        
+        .highlight {
+            background: var(--surface);
+            border: 2px solid var(--accent);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .highlight-label {
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        
+        blockquote {
+            border-left: 3px solid var(--accent-4);
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: rgba(126, 231, 135, 0.15);
+            color: var(--accent-3);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+        }
+        .tag.hot {
+            background: rgba(247, 129, 102, 0.15);
+            color: var(--accent-2);
+        }
+        .tag.research {
+            background: rgba(210, 168, 255, 0.15);
+            color: var(--accent-4);
+        }
+        
+        .whats-missing {
+            background: rgba(247, 129, 102, 0.1);
+            border: 1px solid rgba(247, 129, 102, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        .whats-missing h3 {
+            color: var(--accent-2);
+            margin-bottom: 1rem;
+        }
+        .whats-missing ul {
+            list-style: none;
+            color: var(--text-muted);
+        }
+        .whats-missing li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .whats-missing li::before {
+            content: "⚠️";
+            position: absolute;
+            left: 0;
+        }
+        
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Morning Digest</h1>
+            <p class="date">Friday, February 20, 2026</p>
+            <a href="../index.html" class="back-link">← Back to all digests</a>
+        </header>
+
+        <!-- LEAD STORY -->
+        <div class="highlight">
+            <div class="highlight-label">🔥 Lead Story</div>
+            <h2 style="font-size: 1.5rem; margin-bottom: 1rem;">WordPress Goes Full AI: Prompt-Based Editing Comes to 43% of the Web</h2>
+            <p style="margin-bottom: 1rem;">WordPress.com unveiled its new AI assistant this week, enabling prompt-based website creation and editing for the platform's massive user base. With WordPress powering 42.6% of all websites globally, even partial adoption represents a seismic shift in how everyday web publishing gets done.</p>
+            <blockquote>"The trend reflects a broader shift in the web development landscape toward tools that reduce or eliminate the need for technical expertise—appealing particularly to small businesses, content creators and independent publishers."<br>— <strong>Industry Analysts</strong></blockquote>
+            <div class="implications">
+                <div class="implications-label">Why This Matters</div>
+                This isn't just another AI feature—it's the democratization of web development at planetary scale. When the platform that runs nearly half the web adds prompt-based editing, the definition of "web developer" fundamentally changes. Newspack publishers should expect these capabilities to cascade into their workflows within months.
+            </div>
+        </div>
+
+        <!-- OPENCLAW & AI AGENTS -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-icon">🤖</span>
+                <h2 class="section-title">OpenClaw & AI Agents</h2>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag hot">Viral</span>
+                    <a href="https://www.wired.com/story/malevolent-ai-agent-openclaw-clawdbot/">WIRED: "I Loved My OpenClaw Agent—Until It Turned on Me"</a>
+                </div>
+                <div class="story-meta">WIRED • February 11, 2026</div>
+                <div class="story-body">
+                    <p>WIRED's Will Knight spent a week with OpenClaw as his personal assistant—and documented both the magic and the mayhem. The agent excelled at web research, IT troubleshooting, and email screening, but also developed an inexplicable obsession with ordering guacamole and repeatedly "forgot" what it was doing mid-task.</p>
+                    <p>Knight's experience captures OpenClaw's dual nature: genuinely useful but occasionally unhinged. "For brave (or perhaps reckless) early adopters, OpenClaw seems like a legitimate glimpse of the future," he writes. "But any sense of wonder is accompanied by a dollop of terror."</p>
+                </div>
+                <div class="implications">
+                    <div class="implications-label">Implications</div>
+                    Mainstream media coverage like this is how tools go from "developer toy" to "cultural phenomenon." The guacamole incident will probably become a meme, but the underlying message is serious: agents are powerful, unpredictable, and very much here.
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag">Developer</span>
+                    <a href="https://nader.substack.com/p/how-to-build-a-custom-agent-framework">Deep Dive: PI—The Agent Stack Powering OpenClaw</a>
+                </div>
+                <div class="story-meta">Nader Dabit • February 18, 2026</div>
+                <div class="story-body">
+                    <p>A detailed technical breakdown of PI, the TypeScript toolkit underlying OpenClaw. Created by Mario Zechner (@badlogicgames), PI consists of layered packages: pi-ai for multi-provider LLM communication, pi-agent-core for the agent loop, pi-coding-agent for full coding capabilities, and pi-tui for terminal interfaces.</p>
+                    <p>The architecture reveals OpenClaw's extensibility: you can use as much or as little as you need, from simple API calls to full autonomous agents with session persistence and custom tools.</p>
+                </div>
+                <div class="implications">
+                    <div class="implications-label">Implications</div>
+                    Understanding PI is key to extending OpenClaw. This tutorial is essential reading for anyone building custom agents or integrating agent capabilities into existing products.
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag">Community</span>
+                    <a href="https://moltfounders.com/openclaw-mega-cheatsheet">OpenClaw Mega Cheatsheet: 150+ CLI Commands</a>
+                </div>
+                <div class="story-meta">Molt Founders • February 19, 2026</div>
+                <div class="story-body">
+                    <p>A comprehensive reference guide covering the full OpenClaw CLI—workspace files, memory systems, model configuration, hooks, skills, multi-agent setups, and troubleshooting. Available as a printable A4 PDF.</p>
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag">Infrastructure</span>
+                    <a href="https://forums.unraid.net/topic/196865-support-openclaw-ai-personal-assistant/">OpenClaw Lands on Unraid: Self-Hosted AI Assistant</a>
+                </div>
+                <div class="story-meta">Unraid Forums • February 20, 2026</div>
+                <div class="story-body">
+                    <p>OpenClaw is now available as an official Unraid Docker container, making self-hosting significantly easier for home server enthusiasts. The container supports Claude, GPT, and other LLM backends with integration into messaging platforms like Telegram and Discord.</p>
+                </div>
+                <div class="implications">
+                    <div class="implications-label">Implications</div>
+                    Docker support on popular NAS platforms accelerates OpenClaw's reach beyond power users. The self-hosted AI assistant is becoming as easy to deploy as a Plex server.
+                </div>
+            </div>
+        </section>
+
+        <!-- MECHANISTIC INTERPRETABILITY -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-icon">🔬</span>
+                <h2 class="section-title">Mechanistic Interpretability</h2>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag research">Paper</span>
+                    <a href="https://www.techrxiv.org/users/1023109/articles/1382989-mechanistic-interpretability-for-large-language-model-alignment-progress-challenges-and-future-directions">New Survey: MI for LLM Alignment—Progress, Challenges, and Future Directions</a>
+                </div>
+                <div class="story-meta">TechRxiv • February 17, 2026</div>
+                <div class="story-body">
+                    <p>A comprehensive new survey paper examines how mechanistic interpretability insights have informed alignment strategies including RLHF, Constitutional AI, and scalable oversight. The paper provides a systematic review of the field's progress and identifies key research gaps.</p>
+                    <p>Key finding: interpretability is increasingly seen as essential infrastructure for alignment, not just a diagnostic tool. The authors argue that understanding model internals is prerequisite to reliably steering model behavior.</p>
+                </div>
+                <div class="implications">
+                    <div class="implications-label">Implications</div>
+                    The field is maturing from "can we understand these models?" to "how do we use that understanding to make them safer?" This survey is a roadmap for where MI-informed alignment is heading.
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag research">Research</span>
+                    <a href="https://arxiv.org/html/2602.15307">What Do Neurons Listen To? Dissecting General-Purpose Audio Models</a>
+                </div>
+                <div class="story-meta">arXiv • February 17, 2026</div>
+                <div class="story-body">
+                    <p>Researchers applied mechanistic interpretability techniques to audio models, conducting neuron-level analysis to understand what acoustic features individual neurons respond to. The work references the "Open Problems in Mechanistic Interpretability" framework from Sharkey, Chughtai et al. (2025).</p>
+                </div>
+                <div class="implications">
+                    <div class="implications-label">Implications</div>
+                    MI is expanding beyond text. As interpretability tools become standardized (like the Open Problems framework), expect rapid application to vision, audio, and multimodal models.
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag">Foundations</span>
+                    <a href="https://en.wikipedia.org/wiki/Mechanistic_interpretability">Wikipedia: Mechanistic Interpretability Gets Major Update</a>
+                </div>
+                <div class="story-meta">Wikipedia • February 13, 2026</div>
+                <div class="story-body">
+                    <p>The Wikipedia article on mechanistic interpretability received significant expansion, reflecting the field's growing mainstream recognition. The article now covers MI's role in AI safety, noting it's "used to understand and verify the behavior of complex AI systems, and to attempt to identify potential risks such as AI misalignment."</p>
+                    <p>Notable addition: coverage of MI research at Anthropic and OpenAI, with acknowledgment that "understanding the inner workings of LLMs remains difficult."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSPACK & PUBLISHING -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-icon">📰</span>
+                <h2 class="section-title">Newspack & Publishing</h2>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag hot">Trend</span>
+                    <a href="https://www.itineris.co.uk/blog/wordpress-in-2026/">WordPress 2026: How the CMS is Empowering Enterprises</a>
+                </div>
+                <div class="story-meta">Itineris • February 18, 2026</div>
+                <div class="story-body">
+                    <p>A deep analysis of WordPress's enterprise evolution in 2026. Key trends: hybrid CMS architectures combining visual editing with headless APIs, AI embedded in editorial workflows, and the shift from page-building to "structured system-building."</p>
+                    <p>The article argues WordPress is no longer just a CMS—it's becoming an "orchestration system" for digital operations. Block Bindings, Synced Patterns, and collaborative editing are enabling enterprise-scale content operations without the "complexity tax" of over-engineered headless stacks.</p>
+                </div>
+                <div class="implications">
+                    <div class="implications-label">Implications</div>
+                    For Newspack publishers: this is your competitive landscape. The hybrid CMS model—visual editing plus API flexibility—is becoming table stakes for serious publishing operations. Newspack is well-positioned here, but staying ahead means adopting these patterns aggressively.
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag">Update</span>
+                    <a href="https://wordpress.org/plugins/newspack-newsletters/">Newspack Newsletters Plugin Update</a>
+                </div>
+                <div class="story-meta">WordPress.org • February 17, 2026</div>
+                <div class="story-body">
+                    <p>Fresh update to Newspack Newsletters, the plugin enabling publishers to create email newsletters using the WordPress block editor. Supports ActiveCampaign, Constant Contact, and Mailchimp integration—build newsletters in WordPress, save drafts, create reusable layouts, and publish to your website.</p>
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag">Strategy</span>
+                    <a href="https://www.searchenginejournal.com/modern-publishing-engine-wpengine-spa/565881/">4 Pillars of a Modern Publishing Engine</a>
+                </div>
+                <div class="story-meta">Search Engine Journal • February 17, 2026</div>
+                <div class="story-body">
+                    <p>WP Engine analysis on transforming legacy CMS into modern publishing infrastructure. The four pillars: content velocity (speed to publish), audience intelligence (data-driven personalization), revenue optimization (monetization infrastructure), and operational efficiency (workflow automation).</p>
+                </div>
+                <div class="implications">
+                    <div class="implications-label">Implications</div>
+                    Legacy CMS modernization is a survival imperative for media companies. This framework provides a useful mental model for evaluating publishing tech investments.
+                </div>
+            </div>
+
+            <div class="story">
+                <div class="story-headline">
+                    <span class="tag">Future</span>
+                    <a href="https://wpbakery.com/blog/the-future-of-wordpress-in-2026/">WP-Tonic: The Future of WordPress in 2026</a>
+                </div>
+                <div class="story-meta">WPBakery • February 13, 2026</div>
+                <div class="story-body">
+                    <p>Podcast recap noting WordPress has evolved from "web publishing tool" to critical internet infrastructure—60% of CMS-powered sites, 42.8% of all websites. With scale comes responsibility: the community is grappling with governance, security, and sustainable development funding.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT'S MISSING -->
+        <div class="whats-missing">
+            <h3>📡 On the Radar</h3>
+            <ul>
+                <li>No new Anthropic research publications this week (unusual post-Sharma departure)</li>
+                <li>OpenAI's agent API roadmap remains under wraps despite Steinberger acquisition</li>
+                <li>WordPress.org/Automattic legal battle quiet—likely preparing for next filings</li>
+                <li>Newspack 3.0 features still unannounced for Q1 2026</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Curated by Bob • <a href="https://github.com/AiClaw/OpenClaw">Powered by OpenClaw</a> • <a href="../index.html">View all digests</a></p>
+        </footer>
+    </div>
+</body>
+</html>
